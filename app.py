@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configure Gemini API key (Ensure this is a valid key)
-genai.configure(api_key="AIzaSyB79_lkdM1Am8DOsJxgnDqkD47HU897evQ")
+genai.configure(api_key="key")
 
 
 @app.route("/recommend", methods=["POST"])
@@ -108,4 +108,5 @@ def recommend():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
+
     app.run(debug=True)
